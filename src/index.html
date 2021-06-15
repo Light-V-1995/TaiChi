@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+    <title> 阴阳鱼 </title>
+</head>
+
+<body>
+
+    <div id="html"></div>
+
+    <div id="TaiChi"></div>
+
+    <style id='style'>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        #html {
+            word-break: break-all;
+        }
+
+        #TaiChi {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            height: 400px;
+            width: 400px;
+        }
+
+        #TaiChi::before {
+            content: '';
+            display: block;
+            height: 200px;
+            width: 200px;
+            position: absolute;
+            left: 50%;
+            top: 0;
+            transform: translateX(-50%);
+        }
+
+        #TaiChi::after {
+            content: '';
+            display: block;
+            height: 200px;
+            width: 200px;
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
+        }
+
+        @media(max-width:500px) {
+
+            #html {
+                height: 60vh;
+                overflow: hidden;
+            }
+
+            #TaiChi {
+                height: 40vh;
+                position: relative;
+                top: 10px;
+                left: 50%;
+                height: 200px;
+                width: 200px;
+                transform: translateX(-50%);
+            }
+
+            #TaiChi::before {
+                height: 100px;
+                width: 100px;
+            }
+
+            #TaiChi::after {
+                height: 100px;
+                width: 100px;
+            }
+        }
+    </style>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
